@@ -16,6 +16,9 @@ mkdir -p data
     joaodubas/multilevel:latest
 ```
 
+This should start a container named `multilevel-db`, redirecting the port
+3001 to 3001, and mouting the directory `./data` into `/opt/data`.
+
 ### Volumes
 
 The image expects the following volume:
@@ -24,12 +27,7 @@ The image expects the following volume:
 
 ### Ports
 
-One port is made available to access the container:
-
-* 3001: allow access to multilevel
-
-This should start a container named `multilevel-db`, redirecting the port
-3001 to 3001, and mouting the directoris `./data` into `/opt/data`.
+The image exposes the port 3001, allowing access to `multilevel` instance.
 
 ### Client access to multilevel
 
@@ -52,7 +50,7 @@ conn.pipe(db.createRpcStream()).pipe(conn);
 To discover the container's ip address issue the command:
 
 ```shell
-$ docker inspect pandora | python -c "import sys; import json; print json.loads(sys.stdin.read())[0]['NetworkSettings']['IPAddress']"
+docker inspect --format '{{ NetworkSettings.IPAddress }}' multilevel-db
 ```
 
 ## LICENSE
