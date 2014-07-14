@@ -1,11 +1,11 @@
 {
   "name": "docker-multilevel",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Expose multilevel trough a docker container.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/joaodubas/dockerfiles.git"
+    "url": "https://github.com/joaodubas/docker-multilevel.git"
   },
   "keywords": [
     "leveldb",
