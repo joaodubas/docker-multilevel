@@ -20,9 +20,9 @@
     "url": "http://blog.joaodubas.me"
   },
   "dependencies": {
-    "leveldown": "~0.10.2",
-    "levelup": "~0.18.2",
-    "multilevel": "~5.5.0"
+    "leveldown": "0.10.2",
+    "levelup": "0.18.5",
+    "multilevel": "6.0.0"
   },
   "license": "MIT"
 }
